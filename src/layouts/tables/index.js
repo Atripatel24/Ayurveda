@@ -16,10 +16,15 @@ Coded by www.creative-tim.com
 // @mui material components
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import Checkbox from "@mui/material/Checkbox";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+// import MDBox from "components/MDBox";
+// import MDTypography from "components/MDTypography";
+import MDInput from "components/MDInput";
+import MDButton from "components/MDButton";
 
 // Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -31,6 +36,8 @@ import DataTable from "examples/Tables/DataTable";
 import authorsTableData from "layouts/tables/data/authorsTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
 
+import { Link } from "react-router-dom";
+
 function Tables() {
   const { columns, rows } = authorsTableData();
   const { columns: pColumns, rows: pRows } = projectsTableData();
@@ -38,7 +45,7 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox pt={6} pb={3}>
+      {/* <MDBox pt={6} pb={3}>
         <Grid container spacing={6}>
           <Grid item xs={12}>
             <Card>
@@ -95,8 +102,49 @@ function Tables() {
             </Card>
           </Grid>
         </Grid>
-      </MDBox>
-      <Footer />
+      </MDBox> */}
+      {/* <Footer /> */}
+      <Card>
+        <MDBox pt={4} pb={3} px={3}>
+          <MDBox component="form" role="form">
+            <MDBox mb={2}>
+              <MDInput type="text" label="Product Name" variant="standard" fullWidth />
+            </MDBox>
+            <MDBox mb={2}>
+              <MDInput type="email" label="Product Description" variant="standard" fullWidth />
+            </MDBox>
+            <MDBox mb={2}>
+              <MDInput type="password" label="Disease Name" variant="standard" fullWidth />
+            </MDBox>
+            <MDBox display="flex" alignItems="center" ml={-1}>
+              {/* <Checkbox /> */}
+              {/* <MDTypography
+                variant="button"
+                fontWeight="regular"
+                color="text"
+                sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
+              >
+                &nbsp;&nbsp;I agree the&nbsp;
+              </MDTypography> */}
+              {/* <MDTypography
+                component="a"
+                href="#"
+                variant="button"
+                fontWeight="bold"
+                color="info"
+                textGradient
+              >
+                Terms and Conditions
+              </MDTypography> */}
+            </MDBox>
+            <MDBox mt={4} mb={1}>
+              <MDButton variant="gradient" color="info" medium>
+                Add
+              </MDButton>
+            </MDBox>
+          </MDBox>
+        </MDBox>
+      </Card>
     </DashboardLayout>
   );
 }

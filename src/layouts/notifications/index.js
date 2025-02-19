@@ -113,7 +113,7 @@ function Notifications() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox mt={6} mb={3}>
+      {/* <MDBox mt={6} mb={3}>
         <Grid container spacing={3} justifyContent="center">
           <Grid item xs={12} lg={8}>
             <Card>
@@ -188,8 +188,8 @@ function Notifications() {
             </Card>
           </Grid>
         </Grid>
-      </MDBox>
-      <Footer />
+      </MDBox> */}
+      {/* <Footer /> */}
     </DashboardLayout>
   );
 }

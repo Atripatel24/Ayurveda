@@ -45,16 +45,16 @@ function RTL() {
   const { sales, tasks } = reportsLineChartData;
 
   // Changing the direction to rtl
-  useEffect(() => {
-    setDirection(dispatch, "rtl");
+  // useEffect(() => {
+  //   setDirection(dispatch, "lrt");
 
-    return () => setDirection(dispatch, "ltr");
-  }, []);
+  //   return () => setDirection(dispatch, "ltr");
+  // }, []);
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox py={3}>
+      {/* <MDBox py={3}>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={3}>
             <MDBox mb={1.5}>
@@ -167,8 +167,8 @@ function RTL() {
             </Grid>
           </Grid>
         </MDBox>
-      </MDBox>
-      <Footer />
+      </MDBox> */}
+      {/* <Footer /> */}
     </DashboardLayout>
   );
 }

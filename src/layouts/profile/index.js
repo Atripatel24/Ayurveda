@@ -51,11 +51,14 @@ import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
 
+import Card from "@mui/material/Card";
+import DataTable from "examples/Tables/DataTable";
+
 function Overview() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox mb={2} />
+      {/* <MDBox mb={2} />
       <Header>
         <MDBox mt={5} mb={3}>
           <Grid container spacing={1}>
@@ -195,7 +198,65 @@ function Overview() {
           </Grid>
         </MDBox>
       </Header>
-      <Footer />
+      <Footer /> */}
+      <MDBox pt={6} pb={3}>
+        <Grid container spacing={6}>
+          <Grid item xs={12}>
+            <Card>
+              <MDBox
+                mx={2}
+                mt={-3}
+                py={3}
+                px={2}
+                variant="gradient"
+                bgColor="info"
+                borderRadius="lg"
+                coloredShadow="info"
+              >
+                <MDTypography variant="h6" color="white">
+                  Authors Table
+                </MDTypography>
+              </MDBox>
+              <MDBox pt={3}>
+                {/* <DataTable
+                  table={{ columns, rows }}
+                  isSorted={false}
+                  entriesPerPage={false}
+                  showTotalEntries={false}
+                  noEndBorder
+                /> */}
+              </MDBox>
+            </Card>
+          </Grid>
+          <Grid item xs={12}>
+            <Card>
+              <MDBox
+                mx={2}
+                mt={-3}
+                py={3}
+                px={2}
+                variant="gradient"
+                bgColor="info"
+                borderRadius="lg"
+                coloredShadow="info"
+              >
+                <MDTypography variant="h6" color="white">
+                  Projects Table
+                </MDTypography>
+              </MDBox>
+              <MDBox pt={3}>
+                {/* <DataTable
+                  table={{ columns: pColumns, rows: pRows }}
+                  isSorted={false}
+                  entriesPerPage={false}
+                  showTotalEntries={false}
+                  noEndBorder
+                /> */}
+              </MDBox>
+            </Card>
+          </Grid>
+        </Grid>
+      </MDBox>
     </DashboardLayout>
   );
 }
