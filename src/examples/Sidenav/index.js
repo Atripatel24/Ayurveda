@@ -139,6 +139,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
 
     return returnValue;
   });
+  // console.log("rd", routes);
 
   return (
     <SidenavRoot
