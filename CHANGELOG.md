@@ -406,7 +406,7 @@ ajv                        6.9.1   →   6.10.0
 - **src/components/FixedPlugin/FixedPlugin.jsx**(Left menu used by us for customization - due to this, we've had to add a link for the fonts awesome cdn)
 - **src/components/Header/RTLHeaderLinks.jsx**
 - **src/layouts/Admin.jsx** (instead of Dashboard)
-- **src/layouts/RTL.jsx**
+- **src/layouts/Product-List.jsx**
 - **src/views/RTLPage/RTLPage.jsx**
 
 ### Deleted components

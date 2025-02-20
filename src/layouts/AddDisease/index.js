@@ -27,12 +27,12 @@ import MasterCard from "examples/Cards/MasterCard";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
 // Billing page components
-import PaymentMethod from "layouts/billing/components/PaymentMethod";
-import Invoices from "layouts/billing/components/Invoices";
-import BillingInformation from "layouts/billing/components/BillingInformation";
-import Transactions from "layouts/billing/components/Transactions";
+import PaymentMethod from "layouts/AddDisease/components/PaymentMethod";
+import Invoices from "layouts/AddDisease/components/Invoices";
+import BillingInformation from "layouts/AddDisease/components/BillingInformation";
+import Transactions from "layouts/AddDisease/components/Transactions";
 
-function Billing() {
+function AddDisease() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
@@ -86,4 +86,4 @@ function Billing() {
   );
 }
 
-export default Billing;
+export default AddDisease;

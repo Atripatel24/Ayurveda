@@ -37,11 +37,11 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
-import Billing from "layouts/billing";
-import RTL from "layouts/rtl";
-import Notifications from "layouts/notifications";
-import Profile from "layouts/profile";
+import AddProduct from "layouts/AddProducts";
+import AddDisease from "layouts/AddDisease";
+import ProductList from "layouts/Product-List";
+import DiseaseList from "layouts/Disease-List";
+import Users from "layouts/users";
 import SignIn from "layouts/authentication/sign-in";
 import SignUp from "layouts/authentication/sign-up";
 
@@ -60,11 +60,11 @@ const routes = [
   {
     type: "collapse",
     // name: "Tables",
-    name: "Add Products",
+    name: "Add Product",
     key: "tables",
     icon: <Icon fontSize="small">add</Icon>,
     route: "/Add-Project",
-    component: <Tables />,
+    component: <AddProduct />,
   },
   {
     type: "collapse",
@@ -72,7 +72,7 @@ const routes = [
     key: "billing",
     icon: <Icon fontSize="small">add</Icon>,
     route: "/Add-Disease",
-    component: <Billing />,
+    component: <AddDisease />,
   },
   {
     type: "collapse",
@@ -80,7 +80,7 @@ const routes = [
     key: "rtl",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/Product-List",
-    component: <RTL />,
+    component: <ProductList />,
   },
   {
     type: "collapse",
@@ -88,7 +88,7 @@ const routes = [
     key: "notifications",
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/Disease-List",
-    component: <Notifications />,
+    component: <DiseaseList />,
   },
   {
     type: "collapse",
@@ -96,7 +96,7 @@ const routes = [
     key: "profile",
     icon: <Icon fontSize="small">person</Icon>,
     route: "/Users",
-    component: <Profile />,
+    component: <Users />,
   },
   {
     type: "collapse",

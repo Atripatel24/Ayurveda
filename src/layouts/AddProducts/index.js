@@ -33,12 +33,12 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
-import projectsTableData from "layouts/tables/data/projectsTableData";
+import authorsTableData from "layouts/AddProducts/data/authorsTableData";
+import projectsTableData from "layouts/AddProducts/data/projectsTableData";
 
 import { Link } from "react-router-dom";
 
-function Tables() {
+function AddProduct() {
   const { columns, rows } = authorsTableData();
   const { columns: pColumns, rows: pRows } = projectsTableData();
 
@@ -149,4 +149,4 @@ function Tables() {
   );
 }
 
-export default Tables;
+export default AddProduct;

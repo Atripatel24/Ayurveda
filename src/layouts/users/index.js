@@ -35,11 +35,11 @@ import ProfilesList from "examples/Lists/ProfilesList";
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
 // Overview page components
-import Header from "layouts/profile/components/Header";
-import PlatformSettings from "layouts/profile/components/PlatformSettings";
+import Header from "layouts/users/components/Header";
+import PlatformSettings from "layouts/users/components/PlatformSettings";
 
 // Data
-import profilesListData from "layouts/profile/data/profilesListData";
+import profilesListData from "layouts/users/data/profilesListData";
 
 // Images
 import homeDecor1 from "assets/images/home-decor-1.jpg";
@@ -53,9 +53,9 @@ import team4 from "assets/images/team-4.jpg";
 
 import Card from "@mui/material/Card";
 import DataTable from "examples/Tables/DataTable";
-import authorsTableData from "layouts/tables/data/authorsTableData";
+import authorsTableData from "layouts/AddProducts/data/authorsTableData";
 
-function Overview() {
+function Users() {
   const { columns, rows } = authorsTableData();
   return (
     <DashboardLayout>
@@ -236,4 +236,4 @@ function Overview() {
   );
 }
 
-export default Overview;
+export default Users;

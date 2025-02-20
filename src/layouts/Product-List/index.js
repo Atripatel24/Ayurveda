@@ -30,17 +30,17 @@ import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 
 // Data
-import reportsBarChartData from "layouts/rtl/data/reportsBarChartData";
-import reportsLineChartData from "layouts/rtl/data/reportsLineChartData";
+import reportsBarChartData from "layouts/Product-List/data/reportsBarChartData";
+import reportsLineChartData from "layouts/Product-List/data/reportsLineChartData";
 
 // RTL components
-import Projects from "layouts/rtl/components/Projects";
-import OrdersOverview from "layouts/rtl/components/OrdersOverview";
+import Projects from "layouts/Product-List/components/Projects";
+import OrdersOverview from "layouts/Product-List/components/OrdersOverview";
 
 // Material Dashboard 2 React contexts
 import { useMaterialUIController, setDirection } from "context";
 
-function RTL() {
+function ProductList() {
   const [, dispatch] = useMaterialUIController();
   const { sales, tasks } = reportsLineChartData;
 
@@ -173,4 +173,4 @@ function RTL() {
   );
 }
 
-export default RTL;
+export default ProductList;
