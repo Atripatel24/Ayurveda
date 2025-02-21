@@ -21,6 +21,8 @@ import Card from "@mui/material/Card";
 import Checkbox from "@mui/material/Checkbox";
 
 // Material Dashboard 2 React components
+import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
+import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDInput from "components/MDInput";
@@ -34,23 +36,9 @@ import bgImage from "assets/images/bg-sign-up-cover.jpeg";
 
 function Cover() {
   return (
-    <CoverLayout image={bgImage}>
+    <DashboardLayout>
+      <DashboardNavbar />
       <Card>
-        <MDBox
-          variant="gradient"
-          bgColor="info"
-          borderRadius="lg"
-          coloredShadow="success"
-          mx={2}
-          mt={-3}
-          p={3}
-          mb={1}
-          textAlign="center"
-        >
-          <MDTypography variant="h4" fontWeight="medium" color="white">
-            Edit User
-          </MDTypography>
-        </MDBox>
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
             <MDBox mb={2}>
@@ -59,18 +47,18 @@ function Cover() {
             <MDBox mb={2}>
               <MDInput type="email" label="Email" variant="standard" fullWidth />
             </MDBox>
-            <MDBox mb={2}>
+            {/* <MDBox mb={2}>
               <MDInput type="password" label="Password" variant="standard" fullWidth />
-            </MDBox>
+            </MDBox> */}
             <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info" fullWidth>
+              <MDButton variant="gradient" color="info">
                 Update
               </MDButton>
             </MDBox>
           </MDBox>
         </MDBox>
       </Card>
-    </CoverLayout>
+    </DashboardLayout>
   );
 }
 

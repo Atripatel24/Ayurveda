@@ -41,7 +41,7 @@ export default function data() {
 
   const Job = ({ email }) => (
     <MDBox lineHeight={1} textAlign="left">
-      <MDTypography display="block" variant="caption" color="text" fontWeight="medium">
+      <MDTypography display="block" variant="button" fontWeight="medium">
         {email}
       </MDTypography>
       {/* <MDTypography variant="caption">{description}</MDTypography> */}
@@ -76,18 +76,16 @@ export default function data() {
             <MDTypography
               component="a"
               href="/edituser"
-              variant="caption"
-              color="text"
+              variant="button"
               fontWeight="medium"
-              sx={{ marginRight: 1 }} // Adds spacing to the right
+              sx={{ marginRight: 2 }} // Adds spacing to the right
             >
               Edit
             </MDTypography>
             <MDTypography
               component="a"
               href="#"
-              variant="caption"
-              color="text"
+              variant="button"
               fontWeight="medium"
               sx={{ marginLeft: 1 }}
             >

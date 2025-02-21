@@ -22,13 +22,8 @@ function collapseItem(theme, ownerState) {
   const { pxToRem, rgba, linearGradient } = functions;
 
   return {
-    background: active
-      ? linearGradient(gradients[sidenavColor].main, gradients[sidenavColor].state)
-      : transparent.main,
-    color:
-      (transparentSidenav && !darkMode && !active) || (whiteSidenav && !active)
-        ? dark.main
-        : white.main,
+    background: active ? "#B0D7B0" : transparent.main,
+    color: active ? "black" : white.main,
     display: "flex",
     alignItems: "center",
     width: "100%",
@@ -47,18 +42,7 @@ function collapseItem(theme, ownerState) {
     },
 
     "&:hover, &:focus": {
-      backgroundColor: () => {
-        let backgroundValue;
-
-        if (!active) {
-          backgroundValue =
-            transparentSidenav && !darkMode
-              ? grey[300]
-              : rgba(whiteSidenav ? grey[400] : white.main, 0.2);
-        }
-
-        return backgroundValue;
-      },
+      backgroundColor: active ? "#B0D7B0" : rgba(whiteSidenav ? grey[400] : white.main, 0.2),
     },
   };
 }
@@ -74,10 +58,7 @@ function collapseIconBox(theme, ownerState) {
   return {
     minWidth: pxToRem(32),
     minHeight: pxToRem(32),
-    color:
-      (transparentSidenav && !darkMode && !active) || (whiteSidenav && !active)
-        ? dark.main
-        : white.main,
+    color: active ? "black" : white.main,
     borderRadius: borderRadius.md,
     display: "grid",
     placeItems: "center",
@@ -87,13 +68,13 @@ function collapseIconBox(theme, ownerState) {
     }),
 
     "& svg, svg g": {
-      color: transparentSidenav || whiteSidenav ? dark.main : white.main,
+      color: active ? "black" : white.main,
     },
   };
 }
 
 const collapseIcon = ({ palette: { white, gradients } }, { active }) => ({
-  color: active ? white.main : gradients.dark.state,
+  color: active ? "black" : gradients.dark.state,
 });
 
 function collapseText(theme, ownerState) {
@@ -118,7 +99,7 @@ function collapseText(theme, ownerState) {
 
     "& span": {
       fontWeight: active ? fontWeightRegular : fontWeightLight,
-      fontSize: size.sm,
+      fontSize: pxToRem(16),
       lineHeight: 0,
     },
   };
