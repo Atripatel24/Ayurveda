@@ -11,15 +11,20 @@ import Swal from "sweetalert2";
 
 function Basic() {
   // State for email and password
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState({});
   const navidate = useNavigate();
+
+  let userHandler = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
 
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("User Data:", { email, password });
-    if (email == "admin" && password == "admin") {
+    console.log(user);
+    // let user = { email, password };
+    console.log("User Data:", user);
+    if (user.email == "admin" && user.password == "admin") {
       navidate("/dashboard");
     } else {
       Swal.fire({
@@ -55,8 +60,9 @@ function Basic() {
                 type="text"
                 label="Email"
                 fullWidth
-                value={email}
-                onChange={(e) => setEmail(e.target.value)} // FIXED
+                // value={email}
+                name="email"
+                onChange={userHandler} // FIXED
               />
             </MDBox>
             <MDBox mb={2}>
@@ -64,8 +70,9 @@ function Basic() {
                 type="password"
                 label="Password"
                 fullWidth
-                value={password}
-                onChange={(e) => setPassword(e.target.value)} // FIXED
+                // value={password}
+                name="password"
+                onChange={userHandler} // FIXED
               />
             </MDBox>
             <MDBox mt={4} mb={1}>

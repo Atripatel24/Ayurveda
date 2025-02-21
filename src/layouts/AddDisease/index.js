@@ -1,87 +1,75 @@
-/**
-=========================================================
-* Material Dashboard 2 React - v2.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-dashboard-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
-import Grid from "@mui/material/Grid";
+import { useState } from "react";
+import Card from "@mui/material/Card";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
+import MDInput from "components/MDInput";
+import MDButton from "components/MDButton";
 
 // Material Dashboard 2 React examples
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
-import Footer from "examples/Footer";
-import MasterCard from "examples/Cards/MasterCard";
-import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
-
-// Billing page components
-import PaymentMethod from "layouts/AddDisease/components/PaymentMethod";
-import Invoices from "layouts/AddDisease/components/Invoices";
-import BillingInformation from "layouts/AddDisease/components/BillingInformation";
-import Transactions from "layouts/AddDisease/components/Transactions";
 
 function AddDisease() {
+  const [disease, setDisease] = useState({});
+
+  const diseaseHandler = (e) => {
+    setDisease({ ...disease, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("data:", disease);
+  };
+
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      {/* <MDBox mt={8}>
-        <MDBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={8}>
-              <Grid container spacing={3}>
-                <Grid item xs={12} xl={6}>
-                  <MasterCard number={4562112245947852} holder="jack peterson" expires="11/22" />
-                </Grid>
-                <Grid item xs={12} md={6} xl={3}>
-                  <DefaultInfoCard
-                    icon="account_balance"
-                    title="salary"
-                    description="Belong Interactive"
-                    value="+$2000"
-                  />
-                </Grid>
-                <Grid item xs={12} md={6} xl={3}>
-                  <DefaultInfoCard
-                    icon="paypal"
-                    title="paypal"
-                    description="Freelance Payment"
-                    value="$455.00"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <PaymentMethod />
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid item xs={12} lg={4}>
-              <Invoices />
-            </Grid>
-          </Grid>
+      <Card>
+        <MDBox pt={4} pb={3} px={3}>
+          <MDBox component="form" role="form" onSubmit={handleSubmit}>
+            <MDBox mb={2}>
+              <MDInput
+                type="text"
+                label="Disease Name"
+                variant="standard"
+                fullWidth
+                name="disease_name"
+                onChange={diseaseHandler}
+              />
+            </MDBox>
+            <MDBox mb={2}>
+              <MDInput
+                type="text"
+                label="Disease Description"
+                variant="standard"
+                fullWidth
+                name="disease_desc"
+                onChange={diseaseHandler}
+              />
+            </MDBox>
+            <MDBox mb={2}>
+              <MDInput
+                type="number"
+                label="Minimum Weight (KG)"
+                variant="standard"
+                fullWidth
+                name="min_weight"
+                onChange={diseaseHandler}
+              />
+            </MDBox>
+            <MDBox mt={4} mb={1}>
+              <MDButton variant="gradient" color="info" type="submit">
+                Add
+              </MDButton>
+            </MDBox>
+          </MDBox>
         </MDBox>
-        <MDBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={7}>
-              <BillingInformation />
-            </Grid>
-            <Grid item xs={12} md={5}>
-              <Transactions />
-            </Grid>
-          </Grid>
-        </MDBox>
-      </MDBox>
-      <Footer /> */}
+      </Card>
     </DashboardLayout>
   );
 }

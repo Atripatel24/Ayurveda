@@ -53,7 +53,7 @@ import team4 from "assets/images/team-4.jpg";
 
 import Card from "@mui/material/Card";
 import DataTable from "examples/Tables/DataTable";
-import authorsTableData from "layouts/AddProducts/data/authorsTableData";
+import authorsTableData from "layouts/users/data/authorsTableData";
 
 function Users() {
   const { columns, rows } = authorsTableData();
