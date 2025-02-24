@@ -39,8 +39,7 @@ function Basic() {
     <BasicLayout image={bgImage}>
       <Card>
         <MDBox
-          variant="gradient"
-          bgColor="info"
+          sx={{ backgroundColor: "#4F894F" }}
           borderRadius="lg"
           coloredShadow="info"
           mx={2}
@@ -62,7 +61,7 @@ function Basic() {
                 fullWidth
                 // value={email}
                 name="email"
-                onChange={userHandler} // FIXED
+                onChange={userHandler}
               />
             </MDBox>
             <MDBox mb={2}>
@@ -72,11 +71,11 @@ function Basic() {
                 fullWidth
                 // value={password}
                 name="password"
-                onChange={userHandler} // FIXED
+                onChange={userHandler}
               />
             </MDBox>
             <MDBox mt={4} mb={1}>
-              <MDButton type="submit" variant="gradient" color="info" fullWidth>
+              <MDButton type="submit" sx={{ backgroundColor: "#4F894F" }} color="info" fullWidth>
                 Sign In
               </MDButton>
             </MDBox>

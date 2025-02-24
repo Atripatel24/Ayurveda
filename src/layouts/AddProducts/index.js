@@ -65,7 +65,7 @@ function AddProduct() {
               </FormControl>
             </MDBox>
             <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info" type="submit">
+              <MDButton color="info" type="submit" sx={{ backgroundColor: "#4F894F" }}>
                 Add
               </MDButton>
             </MDBox>

@@ -210,7 +210,7 @@ function Users() {
                 mt={-3}
                 py={3}
                 px={2}
-                variant="gradient"
+                sx={{ backgroundColor: "#4F894F" }}
                 bgColor="info"
                 borderRadius="lg"
                 coloredShadow="info"

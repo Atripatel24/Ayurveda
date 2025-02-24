@@ -51,7 +51,7 @@ function Cover() {
               <MDInput type="password" label="Password" variant="standard" fullWidth />
             </MDBox> */}
             <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info">
+              <MDButton sx={{ backgroundColor: "#4F894F" }} color="info">
                 Update
               </MDButton>
             </MDBox>
