@@ -30,12 +30,12 @@ import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 import ComplexStatisticsCard from "examples/Cards/StatisticsCards/ComplexStatisticsCard";
 
 // Data
-import reportsBarChartData from "layouts/Product-List/data/reportsBarChartData";
-import reportsLineChartData from "layouts/Product-List/data/reportsLineChartData";
+import reportsBarChartData from "layouts/Medicine-List/data/reportsBarChartData";
+import reportsLineChartData from "layouts/Medicine-List/data/reportsLineChartData";
 
 // RTL components
-import Projects from "layouts/Product-List/components/Projects";
-import OrdersOverview from "layouts/Product-List/components/OrdersOverview";
+import Projects from "layouts/Medicine-List/components/Projects";
+import OrdersOverview from "layouts/Medicine-List/components/OrdersOverview";
 
 // Material Dashboard 2 React contexts
 import { useMaterialUIController, setDirection } from "context";

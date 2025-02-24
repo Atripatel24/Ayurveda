@@ -37,9 +37,9 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import AddProduct from "layouts/AddProducts";
+import AddProduct from "layouts/AddMedicine";
 import AddDisease from "layouts/AddDisease";
-import ProductList from "layouts/Product-List";
+import ProductList from "layouts/Medicine-List";
 import DiseaseList from "layouts/Disease-List";
 import Users from "layouts/users";
 import SignIn from "layouts/authentication/sign-in";
@@ -59,20 +59,40 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "Users",
+    key: "users",
+    icon: <Icon fontSize="small">person</Icon>,
+    route: "/users",
+    component: <Users />,
+  },
+  {
+    type: "collapse",
+    name: "Medicines",
+    key: "Medicines",
+    icon: <Icon fontSize="small">inventory_2</Icon>,
+  },
+  {
+    type: "collapse",
     // name: "Tables",
-    name: "Add Product",
-    key: "add product",
+    name: "Add Medicine",
+    key: "add medicine",
     icon: <Icon fontSize="small">add</Icon>,
-    route: "/add-product",
+    route: "/add-medicine",
     component: <AddProduct />,
   },
   {
     type: "collapse",
-    name: "Product List",
-    key: "product list",
+    name: "Medicine List",
+    key: "Medicine list",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/product-list",
+    route: "/medicine-list",
     component: <ProductList />,
+  },
+  {
+    type: "collapse",
+    name: "Disease",
+    key: "disease",
+    icon: <Icon fontSize="small">healing</Icon>,
   },
   {
     type: "collapse",
@@ -89,14 +109,6 @@ const routes = [
     icon: <Icon fontSize="small">table_view</Icon>,
     route: "/disease-list",
     component: <DiseaseList />,
-  },
-  {
-    type: "collapse",
-    name: "Users",
-    key: "users",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/users",
-    component: <Users />,
   },
   {
     type: "collapse",

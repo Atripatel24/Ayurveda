@@ -184,7 +184,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
               variant="button"
               fontWeight="medium"
               color={textColor}
-              sx={{ fontSize: "1.25rem" }} // Adjust font size here
+              sx={{ fontSize: "1.2rem" }} // Adjust font size here
             >
               {brandName}
               {/* Prachin Jadibuti */}
@@ -198,7 +198,23 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
           (darkMode && !transparentSidenav && whiteSidenav)
         }
       />
-      <List>{renderRoutes}</List>
+      <List
+        sx={{
+          overflowY: "auto",
+          "&::-webkit-scrollbar": {
+            width: "5px", // Adjust scrollbar width
+          },
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#888", // Color of the thumb
+            borderRadius: "10px",
+          },
+          "&::-webkit-scrollbar-thumb:hover": {
+            backgroundColor: "#555", // Darker color on hover
+          },
+        }}
+      >
+        {renderRoutes}
+      </List>
       {/* <MDBox p={2} mt="auto">
         <MDButton
           component="a"
